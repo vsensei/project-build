@@ -1,0 +1,66 @@
+@use '../../styles/common';
+@use '../../styles/mixins' as mixins;
+@use '../../styles/variables' as vars;
+
+.card-body {
+  width: 27%;
+  border-top: 3px solid vars.$orange;
+  padding: 30px;
+  background-color: white;
+  max-width: 24vw;
+  min-width: 200px;
+
+  &.big {
+    padding: 0;
+    border-top: 0;
+    height: fit-content;
+  }
+
+  .card-image-container {
+    @include mixins.setwidthandheight(50px, 50px);
+    @extend %rowflex;
+    align-items: center;
+
+    &.big {
+      @extend %fullwidth;
+      height: max-content;
+      align-items: unset;
+    }
+
+    .card-image-circle {
+      @extend %fullwidth;
+      @extend %fullheight;
+      @extend %rowflex;
+      @extend %defaulttransition;
+      @extend %hor-cent-block;
+      background-color: vars.$orange;
+      border-radius: 50%;
+      align-items: center;
+
+      &:hover {
+        @include mixins.setwidthandheight(40px, 40px);
+      }
+
+      &.big {
+        height: max-content;
+        background-color: transparent;
+
+        &:hover {
+          @extend %fullwidth;
+          @extend %fullheight;
+        }
+      }
+    }
+
+    .card-image {
+      @include mixins.setwidthandheight(80%, 80%);
+      @extend %hor-cent-block;
+
+      &.big {
+        @extend %fullwidth;
+        height: unset;
+        border-radius: unset;
+      }
+    }
+  }
+}

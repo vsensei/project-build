@@ -1,0 +1,114 @@
+@use '../../styles/common';
+@use '../../styles/mixins' as mixins;
+@use '../../styles/variables' as vars;
+
+%settings-widthandmargin {
+  width: 30%;
+  margin-right: 70px;
+}
+
+.settings {
+  @extend %rowflex;
+  background-color: vars.$menuwhite;
+  width: 80vw;
+  border-radius: 20px;
+  padding: 30px;
+
+  .settings-items {
+    @extend %settings-widthandmargin;
+
+    .form-newitem {
+      padding: 0px 20px;
+
+      button {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .item-primary {
+    @extend %pointer;
+    background-color: vars.$primaryitem;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 5px;
+
+    &.active {
+      background-color: vars.$orange;
+    }
+  }
+
+  .form-settings {
+    @extend %settings-widthandmargin;
+
+    input {
+      margin-bottom: 30px;
+    }
+
+    textarea {
+      margin-bottom: 30px;
+      resize: vertical;
+      min-height: 42px;
+      min-width: 100%;
+    }
+    .file-upload {
+      @include mixins.setwidthandheight(250px, 40px);
+      position: relative;
+      overflow: hidden;
+
+      input {
+        display: none;
+      }
+
+      label {
+        @extend %pointer;
+        display: block;
+        position: absolute;
+        border-bottom: 2px dashed rgb(34, 213, 245);
+        top: 0;
+        left: 0;
+        padding-bottom: 5px;
+
+        &:hover {
+          @include mixins.animation(all, 0.3s);
+          color: vars.$orange;
+          border-bottom-color: vars.$orange;
+        }
+      }
+    }
+    .custombutton {
+      @extend %fullwidth;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.pleaseSignIn {
+  @extend %columnflex;
+  @extend %centtext;
+  justify-content: center;
+
+  .custombutton {
+    @extend %fullwidth;
+    background-color: vars.$orange;
+    margin-right: unset;
+    margin-top: 10px;
+  }
+
+  form {
+    input {
+      margin: 30px auto;
+    }
+  }
+}
+
+.div-user {
+  @extend %centtext;
+  @extend %pointer;
+  @extend %fullwidth;
+  background-color: vars.$orange;
+
+  i {
+    color: red;
+  }
+}

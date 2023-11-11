@@ -1,22 +1,22 @@
 import Head from 'next/head';
 import MainLayout from '../components/mainlayout/mainlayout.component';
 import styles from '../styles/Home.module.css';
-import Main from '../components/main/main.component';
+import CatalogPage from '../components/catalog-page/catalog-page.component';
 
-const Home = () => {
+const Catalog = () => {
   return (
     <MainLayout>
       <div className={styles.container}>
         <Head>
-          <title>Project_build</title>
+          <title>Project_build-catalog</title>
           <meta name='keywords' content='build'></meta>
           <meta name='description' content="Build company's website"></meta>
           <meta charSet='utf-8' />
           <link rel='icon' href='/favicon.ico' />
         </Head>
-        <Main styles={styles} />
+        <CatalogPage styles={styles} />
       </div>
     </MainLayout>
   );
 };
-export default Home;
+export default Catalog;

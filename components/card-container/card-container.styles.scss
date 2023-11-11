@@ -1,0 +1,12 @@
+@use '../../styles/common';
+@use '../../styles/variables' as vars;
+
+.card-container {
+  @extend %fullwidth;
+  @extend %rowflex;
+  background-color: vars.$secondaryitem;
+  height: 50%;
+  justify-content: space-around;
+  margin-top: 100vh;
+  padding: 10vh 0;
+}

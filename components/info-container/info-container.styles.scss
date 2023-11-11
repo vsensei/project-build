@@ -1,0 +1,10 @@
+@use '../../styles/common';
+
+.info-container {
+  @extend %rowflex;
+  @extend %fullwidth;
+  height: fit-content;
+  justify-content: space-around;
+  padding: 100px 0;
+  background-color: white;
+}

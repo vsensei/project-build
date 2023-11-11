@@ -1,0 +1,32 @@
+@use '../../styles/common';
+@use '../../styles/mixins' as mixins;
+@use '../../styles/variables' as vars;
+
+.mainlayout {
+  height: 100vh;
+
+  nav {
+    @include mixins.setwidthandheight(40vw, 160px);
+    @extend %rowflex;
+    justify-content: space-around;
+    align-items: center;
+    right: 0;
+    position: absolute;
+    left: auto;
+    z-index: 1000;
+    margin-bottom: 10px;
+    margin-right: 5%;
+    font-size: 20pt;
+    min-width: 540px;
+
+    a {
+      @extend %pointer;
+      @extend %defaulttransition;
+      color: white;
+
+      &:hover {
+        color: vars.$orange;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use '../../styles/common';
+@use '../../styles/mixins' as mixins;
+@use '../../styles/variables' as vars;
+
+.map-container {
+  @extend %rowflex;
+  height: fit-content;
+  justify-content: space-around;
+  padding: 10px 0;
+
+  .map {
+    @include mixins.setwidthandheight(750px, 500px);
+  }
+
+  .map-info {
+    height: 400px;
+    line-height: 50px;
+    padding-left: 15px;
+
+    a {
+      color: vars.$darkorange;
+    }
+  }
+}

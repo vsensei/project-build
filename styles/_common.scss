@@ -1,0 +1,37 @@
+@use './mixins';
+
+%rowflex {
+  display: flex;
+}
+
+%columnflex {
+  @extend %rowflex;
+  flex-direction: column;
+}
+
+%hor-cent-block {
+  margin: 0 auto;
+}
+
+%centtext {
+  text-align: center;
+}
+
+%defaulttransition {
+  -moz-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+%pointer {
+  cursor: pointer;
+}
+
+%fullwidth {
+  width: 100%;
+}
+
+%fullheight {
+  height: 100%;
+}

@@ -1,0 +1,41 @@
+@use '../../styles/common';
+@use '../../styles/mixins' as mixins;
+
+.product-container {
+  @extend %fullwidth;
+  @extend %columnflex;
+  height: 50%;
+  justify-content: space-around;
+  margin-top: 100vh;
+  padding: 10vh 0;
+
+  .product-info {
+    @extend %columnflex;
+    @extend %hor-cent-block;
+    width: 80vw;
+    justify-content: center;
+    font-family: Roboto;
+    font-size: 11pt;
+
+    img {
+      width: 80vw;
+    }
+
+    .product-mini-info {
+      @extend %rowflex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+  }
+
+  .product-add-info {
+    @extend %columnflex;
+    width: 80vw;
+    margin: 25px auto 0 auto;
+
+    .product-add-info-item {
+      padding-bottom: 10px;
+      white-space: pre;
+    }
+  }
+}
